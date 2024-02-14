@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      nav ul li a {
+        position: relative;
+      }
+      nav ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        border-radius: 2px;
+        top: 100%;
+        background-color: #ffbd39;
+
+        transition: 0.5s;
+      }
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+
+      ul {
+        gap: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-center gap-30"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav gap-40">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- 
+    <div class="heading">
+      <div class="main-text">
+        <p>Hello</p>
+
+        <h2>I'm Gaurav Jain</h2>
+        <span>A Frontend developer</span>
+        <br />
+        <a href="https://github.com/">
+          <button class="btn-1">My work</button></a
+        >
+      </div>
+      <div class="image-1">
+        <img src="../images/beach image.jpeg" alt="" />
+      </div>
+    </div> -->
+
+    <div
+      class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+      data-scrollax-parent="true"
+    >
+      <div
+        class="one-third js-fullheight order-md-last img"
+        style="background-image: url(images/bg_1.png)"
+      >
+        <div class="overlay"></div>
+      </div>
+      <div
+        class="one-forth d-flex align-items-center ftco-animate"
+        data-scrollax=" properties: { translateY: '70%' }"
+      >
+        <div class="text">
+          <span class="subheading">Hello!</span>
+          <h1 class="mb-4 mt-3">I'm <span>Gaurav jain</span></h1>
+
+          <!-- Element to contain animated typing -->
+          <span id="typing-animation"></span>
+
+          <script>
+            // Initialize the typing animation
+            const typingAnimationElement =
+              document.getElementById("typing-animation");
+
+            // Create an array of typing text
+            const typingTexts = ["Engineer  ", "YouTuber  ", "Teacher   "];
+
+            // Create a function to display the typing animation for a given text
+            function playTypingAnimation(text) {
+              // Loop through each character and add it to the element
+              for (let i = 0; i < text.length; i++) {
+                setTimeout(() => {
+                  typingAnimationElement.textContent += text[i];
+                }, i * 200); // Increase the delay to slow down the typing animation
+              }
+
+              // Once the animation is complete, reset the text and start over
+              setTimeout(() => {
+                typingAnimationElement.textContent = "";
+                playTypingAnimation(
+                  typingTexts[
+                    (typingTexts.indexOf(text) + 1) % typingTexts.length
+                  ]
+                );
+              }, text.length * 200);
+            }
+
+            // Start the typing animation loop
+            playTypingAnimation(typingTexts[0]);
+          </script>
+
+          <br />
+          <br />
+          <h2>A Senior Data Analyst</h2>
+          <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+          <!-- <br> -->
+          <p>
+            <a
+              href="https://www.youtube.com/@RishabhMishraOfficial"
+              class="btn btn-primary py-3 px-4"
+              >YouTube</a
+            >
+            <a
+              href="https://github.com/rishabhnmishra"
+              class="btn btn-white btn-outline-white py-3 px-4"
+              >My works</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
