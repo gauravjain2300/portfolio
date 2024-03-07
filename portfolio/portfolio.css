@@ -198,6 +198,10 @@ span {
   text-align: center;
   font-size: 20px;
 }
+.text a {
+  text-decoration: none;
+  color: #a9a9a9;
+}
 
 .mobile {
   text-align: center;
@@ -205,4 +209,33 @@ span {
 .text p {
   color: #a9a9a9;
   padding-top: 20px;
+}
+
+.psd img {
+  width: 400px;
+  border-radius: 5px;
+  height: 200px;
+}
+.psd {
+  display: flex;
+  gap: 40px;
+  /* padding-top: 50ox; */
+  margin-top: 50px;
+  justify-content: center;
+}
+
+hr {
+  color: #a9a9a9;
+  margin-top: 50px;
+}
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer-icons {
+  color: #a9a9a9;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
